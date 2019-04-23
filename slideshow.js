@@ -1,15 +1,24 @@
-var slideIndex = 0;
-showSlides();
+var i = 0; 			// Start Point
+var images = [];	// Images Array for atom and its components
+var time = 2000;	// Time Between Switch
+	 
+// Image List
+images=["/images/atom.jpg","/images/neutron.jpg","/images/proton.jpg","/images/electron.jpg","/images/quark.jpg","/images/lepton.jpg","/images/boson.jpg"];
+// Change Image
+function changeImg(){
+	document.slide.src = images[i];
 
-//Function showSlides assures a smooth transition between slides
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none"; 
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1} 
-    slides[slideIndex-1].style.display = "block"; 
-    setTimeout(showSlides, 1500); // Change image every 1.5 seconds
+	// Check If Index Is Under Max
+	if(i < images.length - 1){
+	  // Add 1 to Index
+	  i++; 
+	} else { 
+		// Reset Back To O
+		i = 0;
+	}
+
+    // Run function every x seconds
+	setTimeout("changeImg()", time);
 }
+// Run function when page loads
+window.onload=changeImg;

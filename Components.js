@@ -70,3 +70,7 @@ function WritePage(clicked_id){
     document.getElementById("Image").style.alignContent = "center";
     document.getElementById("Link").href = Components[clicked_id].href;
 }
+
+function topFunction() {
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }

@@ -64,25 +64,25 @@
             -->
             <ul id="cat" style="width:85%;">
                 <li >
-                    <button id = "1" onClick="WritePage(this.id)"  >Atom</button>
+                    <button id = "1" onClick="WritePage(this.id),topFunction()"  >Atom</button>
                 </li>
                 <li >
-                    <button id = "2" onClick="WritePage(this.id)"  >Neutron</button>
+                    <button id = "2" onClick="WritePage(this.id),topFunction()"  >Neutron</button>
                 </li>
                 <li>
-                    <button id = "3" onClick="WritePage(this.id)"> Proton</button>
+                    <button id = "3" onClick="WritePage(this.id),topFunction()"> Proton</button>
                 </li>
                 <li>
-                    <button id = "4" onClick="WritePage(this.id)">Electron</button>
+                    <button id = "4" onClick="WritePage(this.id),topFunction()">Electron</button>
                 </li>
                 <li>
-                    <button id = "5" onClick="WritePage(this.id)">  Quarc</button>
+                    <button id = "5" onClick="WritePage(this.id),topFunction()">  Quarc</button>
                 </li>
                 <li>
-                    <button id = "6" onClick="WritePage(this.id)">Lepton</button>
+                    <button id = "6" onClick="WritePage(this.id),topFunction()">Lepton</button>
                 </li>
                 <li>
-                    <button id = "7" onClick="WritePage(this.id)"> Boson</button>
+                    <button id = "7" onClick="WritePage(this.id),topFunction()"> Boson</button>
                 </li>
                 
             </ul>
@@ -96,19 +96,21 @@
             <div class="dropdown" style="position:fixed;">
                 <button class="dropbtn">Categorii</button>
                 <div class="dropdown-content">
-                    <button id = "1" onClick="WritePage(this.id)">Atom</button>
-                    <button id = "2" onClick="WritePage(this.id)">Neutron</button>
-                    <button id = "3" onClick="WritePage(this.id)">Proton</button>
-                    <button id = "4" onClick="WritePage(this.id)">Electron</button>
-                    <button id = "5" onClick="WritePage(this.id)">Quarc</button>
-                    <button id = "6" onClick="WritePage(this.id)">Lepton</button>
-                    <button id = "7" onClick="WritePage(this.id)">Boson</button>
+                    <button id = "1" onClick="WritePage(this.id),topFunction()">Atom</button>
+                    <button id = "2" onClick="WritePage(this.id),topFunction()">Neutron</button>
+                    <button id = "3" onClick="WritePage(this.id),topFunction()">Proton</button>
+                    <button id = "4" onClick="WritePage(this.id),topFunction()">Electron</button>
+                    <button id = "5" onClick="WritePage(this.id),topFunction()">Quarc</button>
+                    <button id = "6" onClick="WritePage(this.id),topFunction()">Lepton</button>
+                    <button id = "7" onClick="WritePage(this.id),topFunction()">Boson</button>
                 </div>
+                
             </div>
+            
         </div>
     </div>
 
-
+    
 
 
 </body>
@@ -116,7 +118,8 @@
         Area dedicated to javascript scripts
 -->
 <script src = "Components.js"></script>
-<script src = "/Scripts/SearchScript.js"></script>
-<script src = "/Scripts/TitleSide.js"></script>
+<script src = "SearchScript.js"></script>
+<script src = "TitleSide.js"></script>
+<script src = "ButtonsJS.js"></script>
 
 </html>

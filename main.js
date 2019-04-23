@@ -13,6 +13,5 @@ const router = require('./router');
 const server = http.createServer(router);
 
 server.listen(port, hostname, () => {
-  console.log(`magic happens at http://${hostname}:${port}/home.html`);
-  
+  console.log(`Hocus Pocus, there is the sitetus http://${hostname}:${port}/home.html`);  
 });

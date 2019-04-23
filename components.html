@@ -1,0 +1,101 @@
+<!--
+    Home page for the project
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+        Area for stylesheets
+    -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="categorii.css">
+    
+</head>
+
+<body>
+    <!--
+        This part is used for the Navigation Bar, which will be present thoughout the whole project
+    -->
+    <div class="NavBar">
+        <div class="header">
+            <h1 type="text" id="Principal_Header" value=""></h1>
+        </div>
+
+        <div id="navbar">
+            <a class="active" href="home.html" style="padding:0px 30px;" id="Home"></a>
+            <a href="components.html" style="padding:0px 30px;" id = "Components"></a>
+            <a href="description.html" style="padding:0px 30px;" id = "Description"></a>
+            <a href="galery.html" style="padding:0px 30px;" id = "Galery"></a>
+        </div>
+    </div>
+
+
+
+    <!--
+        The main body
+        Here, the site is splited in 3 main areas:Left,Center and Right
+    -->
+    <div class="Sides">
+        <!--
+            On the left side of the site, a search bar for the items on this page
+            The search bar has attached a function to sort the items in the input field
+         -->
+        <div class="Side">
+            <p style="position:fixed;">
+                <input type="text" name="search" value="" autocomplete="off" id="myinput" onkeyup="searchFunction()" placeholder="Search"
+                    style="position:fixed">
+                <p></p>
+                <p></p>
+            </p>
+
+        </div>
+
+
+        <!--
+            The main area of the page, where the magic happens :)))
+        -->
+        <div class="Main">
+            <p>
+                <br>
+                <br>
+            </p>
+
+            <br><br>
+            <h1 type="text" id="Title" value=""></h1>
+            <p id = "Description"></p>
+            <img id = "Image"/>
+            <p>Pentru mai multe detalii, accesati <a id="Link"></a></p>
+            
+        </div>
+        <!--
+            On the right side of the site, it is the categories dropdown botton with the three categories:
+            "Laptopuri","Telefoane" and "Electrocasnice"
+         -->
+        <div class="Side">
+            <div class="dropdown" style="position:fixed;">
+                <button class="dropbtn">Categorii</button>
+                <div class="dropdown-content">
+                    <a href="/categorie.html">Laptopuri</a>
+                    <a href="/categorie_2.html">Telefoane</a>
+                    <a href="/categorie_3.html">Electrocasnice</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+<!--
+        Area dedicated to javascript scripts
+-->
+
+<script src = "/Scripts/SearchScript.js"></script>
+<script src = "Components.js"></script>
+<script src = "LoadMain.js"></script>
+<script src = "/Scripts/TitleSide.js"></script>
+
+</html>

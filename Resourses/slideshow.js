@@ -3,7 +3,7 @@ var images = [];	// Images Array for atom and its components
 var time = 2000;	// Time Between Switch
 	 
 // Image List
-images=["/images/atom.jpg","/images/neutron.jpg","/images/proton.jpg","/images/electron.jpg","/images/quark.jpg","/images/lepton.jpg","/images/boson.jpg"];
+images=["./Images/atom.jpg","./Images/neutron.jpg","./Images/proton.jpg","./Images/electron.jpg","./Images/quark.jpg","./Images/lepton.jpg","./Images/boson.jpg"];
 // Change Image
 function changeImg(){
 	document.slide.src = images[i];

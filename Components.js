@@ -1,9 +1,11 @@
+//This function is an attempt to make a structure similar to the c++ ones
 function Details(name,detail,image,href){
     this.name = name;
     this.detail = detail;
     this.image = image;
     this.href = href;
 }
+//This array stores the details for the components of the atom from home.html
 var Components = [
     new Details(//-----------------------General
         "Ce se intampla aici?",
@@ -55,13 +57,77 @@ var Components = [
     )
 ]
 
-document.getElementById("Title").innerHTML = Components[0].name;
-document.getElementById("Description").innerHTML = Components[0].detail;
-document.getElementById("Image").src = Components[0].image;
-document.getElementById("Link").href = Components[0].href;
-document.getElementById("Image").style.width = "80%";
-document.getElementById("Image").style.alignContent = "center";
+//This array stores the details for the scientists from galery.html
+var Scientists = [
+    new Details(
+        "Joseph John Thomson",
+        "Joseph John Thomson (n. 18 decembrie 1856, Cheetham Hill, Regatul Unit – d. 30 august 1940, Cambridge, Regatul Unit) a fost un fizician englez, laureat al Premiului Nobel pentru Fizică în anul 1906, ca apreciere pentru meritele deosebite ale investigațiilor sale teoretice și experimentale asupra conducției electrice în gaze.<br/>Thomson credea că electronii au apărut din atomii de gaz din interiorul tubului său catodic . El a concluzionat astfel că atomii sunt divizibil, iar electronii sunt componentele lor.",
+        "./Images/thomson.jpg",
+        "https://ro.wikipedia.org/wiki/Joseph_John_Thomson"
+    ),
+    new Details(
+        "Ernest Rutherford",
+        "Ernest Rutherford (n. 30 august 1871, Nelson, Noua Zeelandă – d. 19 octombrie 1937, Cambridge, Regatul Unit) a fost un fizician și chimist din Noua Zeelandă, laureat al Premiului Nobel pentru Chimie în anul 1908. Este considerat 'părintele' fizicii nucleare. <br/>Lordul Rutherford a fost profesor la universitățile din Montreal, Manchester și Cambridge. În anul 1907, după ce profesase la Universitatea Mc Gill din Montreal, Canada, Rutherford a acceptat un post la Universitatea din Manchester. În 1919 i-a succedat lui J.J. Thomson la catedra Cavendish de la Universitatea Cambridge. Mulți savanți de renume i-au fost studenți. Printre aceștia se numără nu mai puțin de 9 laureați Nobel.",
+        "./Images/rutherford.jpg",
+        "https://ro.wikipedia.org/wiki/Ernest_Rutherford"
+    ),
+    new Details(
+        "Max Karl Ernst Ludwig Planck",
+        "Max Karl Ernst Ludwig Planck (n. 23 aprilie 1858, Kiel – d. 4 octombrie 1947, Göttingen) a fost un fizician german, fondator al mecanicii cuantice. A primit Premiul Nobel pentru Fizică în 1918, 'ca apreciere a serviciilor pe care le-a adus la progresul fizicii prin descoperirea cuantelor de energie.'.<br/>În cinstea lui Max Planck valorile lungimii, timpului, masei, energiei și a temperaturii, care pot fi compuse din constantele universale c, G, h/2π,κ - se numesc Planckiene.",
+        "./Images/maxPlank.jpg",
+        "https://ro.wikipedia.org/wiki/Max_Planck"
+    ),
+    new Details(
+        "Niels Henrik David Bohr",
+        "Niels Henrik David Bohr (n. 7 octombrie 1885, Copenhaga - d. 18 noiembrie 1962), fizician danez de origine evreiască (din partea mamei), care a avut contribuții esențiale la înțelegerea structurii atomice și a mecanicii cuantice. Niels Bohr a fost profesor de fizică și directorul Institutului de Fizică Teoretică din Copenhaga. A fost autorul modelului atomic care îi poartă numele. A adaptat teoria cuantică la studiul structurii atomice și s-a preocupat de cercetări de fizică nucleară. Pentru contribuțiile sale fundamentale, Bohr a fost laureat al Premiului Nobel pentru Fizică în 1922. Fiul său, Aage Niels Bohr a primit premiul Nobel în 1975 pentru cercetările sale, iar fratele, Harald Bohr, a fost un cunoscut matematician.",
+        "./Images/bohr.jpg",
+        "https://ro.wikipedia.org/wiki/Niels_Bohr"
+    ),
+    new Details(
+        "Werner Heisenberg",
+        "Werner Karl Heisenberg (n. 5 decembrie 1901, Würzburg, Regatul Bavariei, Imperiul German – d. 1 februarie 1976, München, Bavaria, RFG) a fost un celebru fizician german, laureat al Premiului Nobel pentru Fizică în anul 1932 și unul dintre fondatorii fizicii cuantice. Heisenberg s-a aflat mai apoi în fruntea programului pentru arme nucleare al Germaniei Naziste.<br/>În timpul studenției l-a întâlnit pe Niels Bohr, la Göttingen, în 1922. O colaborare rodnică a avut loc între ei. A propus formularea matricială a mecanicii cuantice, prima formulare a mecanicii cuantice, în 1925. Principiul incertitudinii, descoperit în 1927, precizează că determinarea poziției și vitezei unei particule conține erori, produsul acestora fiind o constantă știută. Împreună cu Bohr, formulează Interpretarea Mecanicii Cuantice de la Copenhaga. A formulat modelul structurii protono-neutronice a nucleului atomic.",
+        "./Images/heisenberg.jpg",
+        "https://ro.wikipedia.org/wiki/Werner_Heisenberg"
+    ),
+    new Details(
+        "Erwin Schrödinger",
+        "Erwin Rudolf Josef Alexander Schrödinger (n. 12 august 1887, Viena — d. 4 ianuarie 1961, Viena) a fost un fizician austriac, laureat al premiului Nobel pentru fizică în 1933, unul din părinții fizicii cuantice. Schrödinger a fost profesor de fizică teoretică la Berlin, Graz și Dublin și este fondatorul mecanicii ondulatorii, a cărei ecuație fundamentală îi poartă numele. A studiat de asemenea elementul radiu și a adus contribuții însemnate la definitivarea teoriei culorii.<br/>Prima lucrare de mecanică ondulatorie elaborată de Schrödinger în ianuarie 1926 înlocuiește electronul din modelul atomic al lui Niels Bohr cu o serie de unde, aplicând teoria lui Louis de Broglie, conform căreia electronii se comportă ca niște unde; această teorie este încorporată în ecuația lui Schrödinger.<br/>Pentru a afla mai multe, accesati",
+        "./Images/schrondinger.jpg",
+        "https://ro.wikipedia.org/wiki/Erwin_Schrödinger"
+    ),
+]
 
+//This piece of code tests the page to see if it shall call function related to the home or galery pages
+if(document.getElementById("Title")!=null)
+    WriteHomePage();
+if(document.getElementById("sciName0")!=null)
+    WriteScientists();
+
+//This function writes into the page the details, photo and a link for each great scientist who discovered something related to the atom
+function WriteScientists(){
+    var imgAlign="right";
+    for(var sci=0;sci<Scientists.length;sci++){
+        //For each scientist, the image will be either on the right or on the left of the page, depending on the parity of the sci variable
+        if(sci%2)imgAlign="right";
+        else imgAlign = "left";
+
+        //The code  will write on the page for each scientist his name and some details, as well as a picture stored in the Images folder
+        document.getElementById("sciName"+sci).innerHTML = Scientists[sci].name;
+        document.getElementById("sciParagraph"+sci).innerHTML = "<img src="+Scientists[sci].image+" width = 30% height = 300px align="+imgAlign+"></img>"+Scientists[sci].detail+"<br/>Pentru mai multe informatii, accesati link-ul: <a href="+Scientists[sci].href+" target=_blank>acesta</a>";
+    }
+}
+//This function writes the home page
+function WriteHomePage(){
+    document.getElementById("Title").innerHTML = Components[0].name;
+    document.getElementById("Description").innerHTML = Components[0].detail;
+    document.getElementById("Image").src = Components[0].image;
+    document.getElementById("Link").href = Components[0].href;
+    document.getElementById("Image").style.width = "80%";
+    document.getElementById("Image").style.alignContent = "center";
+}
+/*
+    On click at a button from the menu, this function will write on the page the atom component which the user clicked
+*/
 function WritePage(clicked_id){
     document.getElementById("Title").innerHTML = Components[clicked_id].name;
     document.getElementById("Description").innerHTML = Components[clicked_id].detail;
@@ -70,7 +136,7 @@ function WritePage(clicked_id){
     document.getElementById("Image").style.alignContent = "center";
     document.getElementById("Link").href = Components[clicked_id].href;
 }
-
+//On click on any element, this function will scroll up the page
 function topFunction() {
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    document.documentElement.scrollTop = 0;
   }

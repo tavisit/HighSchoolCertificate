@@ -17,7 +17,7 @@
 
 <body>
     <!--
-        This part is used for the Navigation Bar, which will be present thoughout the whole project
+        This part is used for the Navigation Bar, which will be present throughout the whole project
     -->
     <div class="NavBar">
         <div id="navbar">
@@ -55,46 +55,53 @@
                 <br>
             </p>
             <h1 type="text" id="Title" value=""></h1>
-            <p id = "Description" style="margin-left:50px;margin-right:50px;"></p>
+            <br><br>
             <img id = "Image"/>
+            <p id = "Description" style="margin-left:50px;margin-right:50px;"></p>
             <p>Pentru mai multe detalii, accesati <a id = "Link" target="_blank">acest link</a></p>
             <br><br>
              <!--
             The items are showns in an unordered list
             -->
-            <ul id="cat" style="width:85%;">
-                <li >
-                    <button id = "1" onClick="WritePage(this.id),topFunction()"  >Atom</button>
-                </li>
-                <li >
-                    <button id = "2" onClick="WritePage(this.id),topFunction()"  >Neutron</button>
-                </li>
-                <li>
-                    <button id = "3" onClick="WritePage(this.id),topFunction()"> Proton</button>
-                </li>
-                <li>
-                    <button id = "4" onClick="WritePage(this.id),topFunction()">Electron</button>
-                </li>
-                <li>
-                    <button id = "5" onClick="WritePage(this.id),topFunction()">  Quarc</button>
-                </li>
-                <li>
-                    <button id = "6" onClick="WritePage(this.id),topFunction()">Lepton</button>
-                </li>
-                <li>
-                    <button id = "7" onClick="WritePage(this.id),topFunction()"> Boson</button>
-                </li>
-                
-            </ul>
+            <div style="background-color: aqua;">
+                <br><br>
+                <h1>Afla mai multe!</h1>
+                <br><br><br>
+
+                <p align="center" style="margin-left:20%;margin-right:20%;">Pentru a afla mai multe despre componentele atomului, dar si despre acesta, va invitam sa accesati link-urile de mai jos.</p>
+                <ul id="cat" style="width:85%;">
+                    <li >
+                        <button id = "1" onClick="WritePage(this.id),topFunction()"  >Atom</button>
+                    </li>
+                    <li >
+                        <button id = "2" onClick="WritePage(this.id),topFunction()"  >Neutron</button>
+                    </li>
+                    <li>
+                        <button id = "3" onClick="WritePage(this.id),topFunction()"> Proton</button>
+                    </li>
+                    <li>
+                        <button id = "4" onClick="WritePage(this.id),topFunction()">Electron</button>
+                    </li>
+                    <li>
+                        <button id = "5" onClick="WritePage(this.id),topFunction()">  Quarc</button>
+                    </li>
+                    <li>
+                        <button id = "6" onClick="WritePage(this.id),topFunction()">Lepton</button>
+                    </li>
+                    <li>
+                        <button id = "7" onClick="WritePage(this.id),topFunction()"> Boson</button>
+                    </li>
+                    
+                </ul>
+            </div>
 
         </div>
         <!--
-            On the right side of the site, it is the categories dropdown botton with the three categories:
-            "Laptopuri","Telefoane" and "Electrocasnice"
+            On the right side of the site, there is the Components dropdown botton with the every component:
          -->
         <div class="Side">
             <div class="dropdown" style="position:fixed;">
-                <button class="dropbtn">Categorii</button>
+                <button class="dropbtn">Componente</button>
                 <div class="dropdown-content">
                     <button id = "1" onClick="WritePage(this.id),topFunction()">Atom</button>
                     <button id = "2" onClick="WritePage(this.id),topFunction()">Neutron</button>
@@ -118,7 +125,6 @@
         Area dedicated to javascript scripts
 -->
 <script src = "Components.js"></script>
-<script src = "SearchScript.js"></script>
 <script src = "TitleSide.js"></script>
 <script src = "ButtonsJS.js"></script>
 

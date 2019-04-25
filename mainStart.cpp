@@ -36,6 +36,8 @@ int main()
     } else {
         system("Server");
         std::future<void> f = std::async(std::launch::async, Mainjs);
+        cout<<"Se porneste Serverul...";
+        Sleep(10000);
         StartChrome();
         f.get();
     }

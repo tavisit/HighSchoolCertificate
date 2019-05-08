@@ -9,7 +9,7 @@ function Details(name,detail,image,href){
 var Components = [
     new Details(//-----------------------General
         "Ce se intampla aici?",
-        "Acest site a fost creat ca proiect in cadrul etapei practice a atestatului la informatica.<br/><br/>Toate informatiile sunt luate de pe diferite siteuri( majoritar Wikipedia) si sunt introduse in site cu ajutorul framework-ului Node.js si limbajului de programare JavaScript. Paginile sunt generate prin cod pentru o mai buna modificare ulterioara sau mentenanta.<br/>Pentru crearea scheletului site-ului s-a folosit HTML si CSS pentru infrumusetarea acestuia<br/><br/>Codul sursa impreuna cu imaginile si descrierea se gasesc pe GitHub la link-ul de mai jos.",
+        "Acest site a fost creat ca proiect in cadrul etapei practice a atestatului la informatica.<br/><br/>Toate informatiile sunt luate de pe diferite siteuri( majoritar Wikipedia) si sunt introduse in site cu ajutorul framework-ului Node.js si limbajului de programare JavaScript. Paginile sunt generate prin cod pentru o mai buna modificare ulterioara sau mentenanta.<br/>Pentru crearea scheletului site-ului s-a folosit HTML si CSS pentru infrumusetarea acestuia<br/><br/>Codul sursa impreuna cu imaginile si descrierea se gasesc pe GitHub la link-ul de mai jos.<br/><br/><br/> Proiect realizat de elevul Matei Octavian Mihai, clasa a XII-a D de la Colegiul National 'Carol I', Craiova, Dolj<br/>Coordonator: Florin Niculescu, profesor CN 'Carol I'",
         "./Images/github.png",
         "https://github.com/tavisit/HighSchoolCertificate"
     ),

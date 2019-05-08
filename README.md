@@ -1,5 +1,5 @@
 # HighSchoolCertificate
-
+Numele meu este Matei Octavian Mihai, elev la CN Carol I, Craiova Dolj, coordonator de proiect Niculescu Florin.<br/>
 Acest site a fost creat ca raspuns la cerinta de creare a unui site pe tematica "Atomul" pentru proba practica a atestatului de la sfarsitul clasei a 12-a, profilul matematica-informatica.<br/>
 <br/>
 Pentru buna functionare a siteului, este necesar framework-ul [Node.js](https://nodejs.org/en/), fiindca acesta este responsabil pentru crearea serverului si gestionarea resurselor din cadrul codului sursa. Instructiunile de instalare si folosire se regasesc pe siteul oferit mai sus, fiind necesara pornirea sa ori din consola Visual Studio Code( IDE folosit prioritar pentru crearea siteului), ori din consola windows( cmd) .<br/>

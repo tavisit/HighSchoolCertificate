@@ -68,7 +68,7 @@ p{
     width: 60%;
     text-align: center;
     background-color:white;
-    opacity:50%;
+    opacity:100%;
 }
 .Scientist{
     margin-left:5%;
@@ -76,7 +76,7 @@ p{
 }
 body{
     background-color: rgb(106, 135, 145);
-    opacity:50%
+    opacity:100%
 }
 
 
